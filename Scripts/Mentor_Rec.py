@@ -1,3 +1,4 @@
+#Import necessary libraries
 import pandas as pd
 import streamlit as st
 import gspread
@@ -23,31 +24,28 @@ import pyperclip  # Import the pyperclip module for clipboard operations
 import os
 import requests
 #from supabase_py import create_client,Client
-#from supabase_py import create_client,Client
-# Read the category dataset and extract unique categories
-
 from supabase import create_client, Client
 from supabase.client import ClientOptions
-
-
 
 
 # Function to get the current timestamp
 def get_timestamp():
     return datetime.now()
 
-# Display the PNG image in the top left corner of the Streamlit sidebar with custom dimensions
+# Display the PNG image in the top corner of the Streamlit sidebar with custom dimensions
 image_path = 'https://twetkfnfqdtsozephdse.supabase.co/storage/v1/object/sign/stemcheck/VS-logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzdGVtY2hlY2svVlMtbG9nby5wbmciLCJpYXQiOjE3MjE5NzA3ODUsImV4cCI6MTc1MzUwNjc4NX0.purLZOGk272W80A4OlvnavqVB9u-yExhzpmI3dZrjdM&t=2024-07-26T05%3A13%3A02.704Z'
 st.markdown(
     f'<div style="text-align:center"><img src="{image_path}" width="150"></div>',
     unsafe_allow_html=True
 )
 
+#Display the title of the google form
 st.markdown(
     "<h1 style='color: black; font-weight: bold;'>Kalpana - She for STEM Role Model and Mentor Recruitment Form</h1>", 
     unsafe_allow_html=True
 )
 
+#Add the Questions present in the Google form
 Name=st.text_input("Enter your full name*")
 Email_id=st.text_input("Enter your email address*")
 Number=st.text_input("Enter your WhatsApp number (with country code, DONOT ADD '+')*")
@@ -99,6 +97,7 @@ if not Name or not Email_id or not Number or not Profile or not Institute or not
     st.stop()
 
 
+#Create data frame of the data filled in the GUI's elements
 def create_feedback_dataframe(primary_key, Name, Email_id, Number, Profile, Institute, Current_job, Degree, Country, Current_city, selected_options, comments_a,option2,session_times,option_B,uploaded_file1,uploaded_file2):
     data = {
         'ID': primary_key,
@@ -124,7 +123,7 @@ def create_feedback_dataframe(primary_key, Name, Email_id, Number, Profile, Inst
     return feedback_df
 
 
-
+#Supabase credentials to store data
 url: str = 'https://twetkfnfqdtsozephdse.supabase.co'
 key: str = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR3ZXRrZm5mcWR0c296ZXBoZHNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE5Njk0MzcsImV4cCI6MjAzNzU0NTQzN30.D76H5RoTel0M7Wj6PTRSAXxxYGic7K25BSaeQDZqIN0'
 # Create a Supabase client
@@ -134,7 +133,7 @@ supabase: Client = create_client(url, key, options=ClientOptions(
     schema="public",
   ))
 
-
+#Store data to Supabase 
 combined_button_text = "Submit"   
 
 if st.button(combined_button_text):
