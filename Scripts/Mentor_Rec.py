@@ -55,20 +55,27 @@ st.write("Selected Cohort:", selected_Cohort)
 # Function to read all CSV files from a folder and store them in a dictionary
 # Function to read CSV files from a folder path obtained from GitHub and store them in a dictionary
 # Define the GitHub API URLs for the folders containing CSV files
+
+
 github_urls = {
-    "Career Exploration": 'https://docs.google.com/spreadsheets/d/1nKOWNzHazM49Dw15vMEWhdJEhSTZvk3Wv4DU-eaImHY/edit?usp=sharing',
-    "CAP": 'https://docs.google.com/spreadsheets/d/1aEeSsVazN2Zt0gOEOrC8zq5ikE9L9IQ2JA5yP3qUolU/edit?usp=sharing',
-    "Goal Setting(UK)": 'https://docs.google.com/spreadsheets/d/133hrhht7g2TC8NQIG30JKbSfDSoAr4SkPuuTvcQpYnY/edit?usp=sharing',
-    "Resume": 'https://docs.google.com/spreadsheets/d/159uBGYMsbJGv70jbXF5vwEdB7m8zbubif_EbY1TFeVg/edit?usp=sharing',
-    "SMART Goals": 'https://docs.google.com/spreadsheets/d/19UrJUqaeXPDVcL6_bN0CiIc3fcSh_DputLNl4ciiR3w/edit?usp=sharing',
-    "SMART Goal(UK)":"https://docs.google.com/spreadsheets/d/1fjpfqB-X0hLRzjuIcm8_yquRkFr1Ehr07FLV5UrC5LQ/edit?usp=sharing",
-    "SWOT Analysis": 'https://docs.google.com/spreadsheets/d/17tiZ7aebyiec8bHgE1vVnFMorBR3pqR870NJXvk7oQ0/edit?usp=sharing'
-    
-    # Add more assignments as needed
+    "Incubator_4":{
+        "Goal Setting": "https://docs.google.com/spreadsheets/d/1N5xI5KkCxKL6YYA2a3mfaj4F-wSl5zFifu4A84UHoOY/edit?usp=sharing",
+        "Searching & Securing Internship": 'https://docs.google.com/spreadsheets/d/1DnUPMOOxqgaPRJ6b0V9e8usGQtkVG1qJ7ffRzl_E5Uc/edit?usp=sharing',
+        "Career Exploration": 'https://docs.google.com/spreadsheets/d/1nKOWNzHazM49Dw15vMEWhdJEhSTZvk3Wv4DU-eaImHY/edit?usp=sharing',
+        "CAP": 'https://docs.google.com/spreadsheets/d/1aEeSsVazN2Zt0gOEOrC8zq5ikE9L9IQ2JA5yP3qUolU/edit?usp=sharing',
+        "SMART Goals": 'https://docs.google.com/spreadsheets/d/19UrJUqaeXPDVcL6_bN0CiIc3fcSh_DputLNl4ciiR3w/edit?usp=sharing',
+        "Resume": 'https://docs.google.com/spreadsheets/d/159uBGYMsbJGv70jbXF5vwEdB7m8zbubif_EbY1TFeVg/edit?usp=sharing'
+        
+    }
+    ,
+    "Incubator_6":{
+        "Goal Setting(UK)": 'https://docs.google.com/spreadsheets/d/133hrhht7g2TC8NQIG30JKbSfDSoAr4SkPuuTvcQpYnY/edit?usp=sharing'
+        # Add file names for Incubator_3
+    }
 }
 
 # Update the URLs to point to the export format
-urls = {key: value.replace('/edit?usp=sharing', '/export?format=xlsx') for key, value in github_urls.items()}
+urls = github_urls.get(selected_Cohort, {key: value.replace('/edit?usp=sharing', '/export?format=xlsx') for key, value in github_urls.items()})
 
 # Read the data from the modified URLs into a pandas DataFrame based on user selection
 selected_assignment_file = st.sidebar.selectbox('Select an assignment file', list(github_urls.keys()))
