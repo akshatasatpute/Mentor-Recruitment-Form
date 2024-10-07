@@ -1,17 +1,14 @@
-#import necessary libraries
 import streamlit as st
 import pandas as pd
 import pyperclip  # Import the pyperclip module for clipboard operations
 import os
 import requests
 
-from supabase_py import create_client, Client
+from supabase_py import create_client,Client
 # Read the category dataset and extract unique categories
 
 from io import StringIO  # Import StringIO directly from the io module
 from io import BytesIO
-from supabase import create_client, Client
-from supabase.client import ClientOptions
 
 
 # Set initial scale for very small screens
