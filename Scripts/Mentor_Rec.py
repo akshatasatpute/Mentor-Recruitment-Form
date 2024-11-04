@@ -103,19 +103,21 @@ option_B = st.radio(" Would you like to schedule a 10-15 minute call with us for
 uploaded_file1 = st.file_uploader(" Upload your Curriculum Vitae/Resume*", accept_multiple_files=False, type=["csv", "txt"])
 if uploaded_file1 is not None:
     encoded_file_name1 = urllib.parse.quote(uploaded_file1.name)
+    st.write(f"[Access your uploaded file]({encoded_file_name1})")
     # Proceed with other processing using encoded_file_name1
 else:
     st.warning("Please upload a file to proceed.")
-st.write(f"[Access your uploaded file]({encoded_file_name1})")
+#st.write(f"[Access your uploaded file]({encoded_file_name1})")
 
 #uploaded_file = st.file_uploader("Upload a file", type=["csv", "txt"])
 uploaded_file2 = st.file_uploader(" Please upload your bio and a professional headshot*", accept_multiple_files=False, type=["csv", "txt"])
 if uploaded_file1 is not None:
     encoded_file_name2 = urllib.parse.quote(uploaded_file2.name)
+    st.write(f"[Access your uploaded file]({encoded_file_name2})")
     # Proceed with other processing using encoded_file_name1
 else:
     st.warning("Please upload a file to proceed.")
-st.write(f"[Access your uploaded file]({encoded_file_name1})")
+#st.write(f"[Access your uploaded file]({encoded_file_name1})")
 
 if not Name or not Email_id or not Number or not Profile or not Institute or not Current_job or not Degree or not Country or not Current_city or not selected_options or not comments_a or not option2 or not session_times or not option_B or not uploaded_file1 or not uploaded_file2 :
     st.error("Please fill in all the compulsory fields marked with * before proceeding.")
