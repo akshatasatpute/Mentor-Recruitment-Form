@@ -60,7 +60,7 @@ st.markdown(
 )
 
 st.markdown(
-    "<h2 style='color: black;font-weight: bold;font-size: 10px; text-align: center;margin-top: 0; margin-bottom: 5px;'>Sign up to shape the future of next generation in STEM</h2>", 
+    "<h2 style='color: black;font-weight: bold;font-size: 16px; text-align: center;margin-top: 0; margin-bottom: 5px;'>Sign up to shape the future of next generation in STEM</h2>", 
     unsafe_allow_html=True
 )
 
