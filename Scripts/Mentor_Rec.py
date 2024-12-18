@@ -57,7 +57,7 @@ st.markdown(
 st.markdown(
     "<div style='text-align: center;'>"
     "<h1 style='color: black; font-weight: bold; text-align: center;margin: 0;'> Join 'She for STEM' Movement </h1>"
-    "<h4 style='color: black;font-weight: bold;font-size: 28px; text-align: center;margin: 0;'>Sign up to shape the future of next generation in STEM</h4>"
+    "<h4 style='color: black;font-weight: bold;font-size: 28px; text-align: center;margin:3px;'>Sign up to shape the future of next generation in STEM</h4>"
     "</div>", 
     unsafe_allow_html=True
 
