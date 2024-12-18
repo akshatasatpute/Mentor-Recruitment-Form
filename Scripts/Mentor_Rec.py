@@ -56,8 +56,8 @@ st.markdown(
 
 st.markdown(
     "<div style='text-align: center;'>"
-    "<span style='font-size: 32px; font-weight: bold;'>Kalpana - She for STEM Role Model and Mentor Recruitment Form</span><br>"
-    "<span style='font-size: 18px;'>This is a smaller heading below the main title</span>"
+    "<span style='font-size: 32px; font-weight: bold;'>Join 'She for STEM' Movement</span><br>"
+    "<span style='font-size: 18px;'>Sign up to shape the future of next generation in STEM</span>"
     "</div>", 
     unsafe_allow_html=True
 )
