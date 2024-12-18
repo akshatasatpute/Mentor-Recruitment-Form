@@ -55,7 +55,7 @@ st.markdown(
 )
 
 st.markdown(
-    "<div style='text-align: center;'>"
+    "<div style='text-align: center;margin-bottom: 5px;'>"
     "<span style='font-size: 34px; font-weight: bold;'>Join 'She for STEM' Movement</span><br>"
     "<span style='font-size: 18px;font-weight: bold;'>Sign up to shape the future of next generation in STEM</span>"
     "</div>", 
