@@ -56,19 +56,11 @@ st.markdown(
 
 st.markdown(
     "<div style='text-align: center;'>"
-    "<h1 style='color: black; font-weight: bold; text-align: center;margin: 0;'> Join 'She for STEM' Movement </h1>"
-    "<h4 style='color: black;font-weight: bold;font-size: 28px; text-align: center;margin:5px;'>Sign up to shape the future of next generation in STEM</h4>"
+    "<span style='font-size: 32px; font-weight: bold;'>Kalpana - She for STEM Role Model and Mentor Recruitment Form</span><br>"
+    "<span style='font-size: 18px;'>This is a smaller heading below the main title</span>"
     "</div>", 
     unsafe_allow_html=True
-
 )
-
-#"<h1 style='color: black; font-weight: bold; text-align: center;margin-bottom: 5px;'> Join 'She for STEM' Movement </h1>", 
-    #unsafe_allow_html=True
-#st.markdown(
-    #"<h2 style='color: black;font-weight: bold;font-size: 16px; text-align: center;margin-top: 0; margin-bottom: 5px;'>Sign up to shape the future of next generation in STEM</h2>", 
-    #unsafe_allow_html=True
-#)
 
 Name=st.text_input("Enter your full name*")
 Email_id=st.text_input("Enter your email address (Work/Personal)*")
