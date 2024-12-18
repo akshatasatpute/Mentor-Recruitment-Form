@@ -55,12 +55,12 @@ st.markdown(
 )
 
 st.markdown(
-    "<h1 style='color: black; font-weight: bold; text-align: center;margin-bottom: 10px;'> Join 'She for STEM' Movement </h1>", 
+    "<h1 style='color: black; font-weight: bold; text-align: center;margin-bottom: 5px;'> Join 'She for STEM' Movement </h1>", 
     unsafe_allow_html=True
 )
 
 st.markdown(
-    "<h2 style='color: black;font-weight: bold; text-align: center;margin-top: 0; margin-bottom: 10px;'>Sign up to shape the future of next generation in STEM</h2>", 
+    "<h2 style='color: black;font-weight: bold; text-align: center;margin-top: 0; margin-bottom: 5px;'>Sign up to shape the future of next generation in STEM</h2>", 
     unsafe_allow_html=True
 )
 
